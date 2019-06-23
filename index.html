@@ -19,35 +19,59 @@
         </center>
     </h1>
 
-    <div id="display">0</div>
-    <br>
-    <button class="button">7</button>
-    <button class="button">8</button>
-    <button class="button">9</button>
-    <button class="button">÷</button>
-    <button class="button">Clear</button>
-    <br>
-    <button class="button">4</button>
-    <button class="button">5</button>
-    <button class="button">6</button>
-    <button class="button">x</button>
-    <button class="button">Balance</button>
-    <br>
-    <button class="button">1</button>
-    <button class="button">2</button>
-    <button class="button">3</button>
-    <button class="button">-</button>
-    <button class="button">Deposit</button>
-    <br>
-    <button class="button">0</button>
-    <button class="button">00</button>
-    <button class="button">.</button>
-    <button class="button">+</button>
-    <button class="button">Withdraw</button>
-    <br>
-    <button class="button" id="equals">=</button>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div id="display">0</div>
+            <br>
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button">÷</button>
+            <button class="button">Clear</button>
+            <br>
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button">x</button>
+            <button class="button">Balance</button>
+            <br>
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button">-</button>
+            <button class="button">Deposit</button>
+            <br>
+            <button class="button">0</button>
+            <button class="button">00</button>
+            <button class="button">.</button>
+            <button class="button">+</button>
+            <button class="button">Withdraw</button>
+            <br>
+            <button class="button" id="equals">=</button>
+        </div>
 
+        <div class="grid-item">
+            <div id="parent">
+                <div class="grid">
+                    <div>Kama'aina</div>
+                    <button>9 holes - $12</button>
+                    <button>18 holes - $16</button>
+                    <button>cart - $8</button>
+                    <button>9 holes & cart - $20</button>
+                    <button>18 holes & cart - $24</button>
+                </div>
 
+                <div class="grid">
+                    <div>Visitors</div>
+                    <button>9 holes - $22</button>
+                    <button>18 holes - $30</button>
+                    <button>cart - $16</button>
+                    <button>9 holes & cart - $38</button>
+                    <button>18 holes & cart - $46</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/calculator.js"></script>
     <script src="js/cash_register.js"></script>
