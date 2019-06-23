@@ -1,0 +1,22 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#display{
+    font-size: 16px;
+    color:#24ABA7;
+    background-color: #FAFBFB;
+    border: solid 1px #2F2D65;
+    width: 200px;
+}
+
+.button{
+    font-size: 16px;
+    color:#FAFBFB;
+    background-color: #24ABA7;
+    border-radius: 5px;
+    padding: 2px; 
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+}
