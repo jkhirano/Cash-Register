@@ -1,13 +1,14 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 }
 
 #display{
-    font-size: 16px;
     color:#24ABA7;
     background-color: #FAFBFB;
     border: solid 1px #2F2D65;
     width: 200px;
+    text-align: right;
 }
 
 /* GRID (2 COLUMNS) FOR CALC AND ITEMS */
@@ -24,7 +25,21 @@ body {
   }
 
 /* CALCULATOR BUTTONS */
-.button{
+.number{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color:#FAFBFB;
+    background-color: #24ABA7;
+    border-radius: 5px;
+    padding: 2px; 
+    width: 30px;
+    /* width: auto; */
+    /* min-width: 30px; */
+    height: 30px;
+    margin: 2px;
+}
+
+.decimal{
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color:#FAFBFB;
@@ -34,6 +49,34 @@ body {
     width: 30px;
     height: 30px;
     margin: 2px;
+}
+
+.operator{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color:#FAFBFB;
+    background-color: #9DB3C2;
+    border-radius: 5px;
+    padding: 2px; 
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+}
+
+#equal{
+    width: 212px;
+}
+
+.reg{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color:#FAFBFB;
+    background-color:#7D7A9E;
+    border-radius: 5px;
+    padding: 2px; 
+    width: 60px;
+    height: 30px;
+    margin: 2px;  
 }
 
 /* ITEM BUTTONS */

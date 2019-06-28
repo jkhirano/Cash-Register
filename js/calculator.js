@@ -1,28 +1,47 @@
-var calculatorModule = (function () {
+var calculatorModule = function () {
     let memory = 0;
     let total = 0;
+    let balance = 20;
     let calculator = {};
 
     calculator.load = function (x) {
-        if (typeof x === 'number') {
-            total = x;
-            return x;
+        if (typeof parseInt(x) === 'number') {
+            if (total == '0') {
+                total = x;
+            }else{
+            total += x;}
+            return total;
         }else{
-            throw error;
+            throw new Error;
         }
 
     }
 
-    calculator.getTotal = function (x) {
-        return total;
-
+    calculator.clearTotal = function(x){
+        return total = 0;
     }
 
-    calculator.add = function (x) {
-        if (typeof x === 'number'){
-            total += x;
+    calculator.getTotal = function (x) {
+        return total;
+    }
+
+    calculator.getBalance = function(x){
+        return total = balance;
+    }
+
+    calculator.deposit = function(x){
+        return balance + x;
+    }
+
+    calculator.withdraw = function(x){
+        return balance - x;
+    }
+
+    calculator.add = function (x, y) {
+        if (typeof parseInt(x) === 'number' && typeof parseInt(y) === 'number'){
+            x + y;
         }else{
-            throw error;
+            throw new Error;
         }
     }
 
@@ -64,4 +83,4 @@ var calculatorModule = (function () {
 
     return calculator;
 
-}());
+};
