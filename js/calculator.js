@@ -4,17 +4,25 @@ var calculatorModule = function () {
     let balance = 20;
     let calculator = {};
 
-    calculator.load = function (x) {
-        if (typeof parseInt(x) === 'number') {
-            if (total == '0') {
-                total = x;
-            }else{
-            total += x;}
-            return total;
-        }else{
-            throw new Error;
-        }
+    // calculator.load = function (x) {
+    //     if (typeof parseInt(x) === 'number') {
+    //         if (total == '0') {
+    //             total = x;
+    //         }else{
+    //         total += x;}
+    //         return total;
+    //     }else{
+    //         throw new Error;
+    //     }
 
+    // }
+
+    calculator.load = function (x) {
+        if (typeof x === 'number'){
+            total = x;
+        }else{
+            throw error;
+        }
     }
 
     calculator.clearTotal = function(x){
@@ -37,11 +45,19 @@ var calculatorModule = function () {
         return balance - x;
     }
 
-    calculator.add = function (x, y) {
-        if (typeof parseInt(x) === 'number' && typeof parseInt(y) === 'number'){
-            x + y;
+    // calculator.add = function (x, y) {
+    //     if (typeof parseInt(x) === 'number' && typeof parseInt(y) === 'number'){
+    //         x + y;
+    //     }else{
+    //         throw new Error;
+    //     }
+    // }
+
+    calculator.add = function(x){
+        if (typeof x === 'number'){
+            total += x;
         }else{
-            throw new Error;
+            throw error;
         }
     }
 
