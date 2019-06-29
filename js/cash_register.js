@@ -20,11 +20,13 @@ function showNum() {
     if (!firstNum) {
         firstNum = parseFloat(this.textContent);
         cashReg.load(parseFloat(this.textContent));
+        console.log('firstNum');
     } else if (firstNum && operation) {
         secondNum = parseFloat(this.textContent);
+        console.log('secondNum');
     }
 };
-    // display.textContent = cashReg.load(this.textContent);
+// display.textContent = cashReg.load(this.textContent);
 
 // EVENT LISTENER - OPERATIONS:
 
@@ -38,20 +40,20 @@ for (let i = 0; i < opButton.length; i++) {
 function showOps() {
     let i = parseInt(displayBox.textContent);
     displayBox.innerHTML = '';
-    cashReg.saveMemory();
-    cashReg.clearTotal();
+    // cashReg.saveMemory();
+    // cashReg.clearTotal();
     if (this.id == 'divide') {
         operation = '÷';
-        // display.textContent = this.textContent;
+        displayBox.textContent = this.textContent;
     } else if (this.id == 'multiply') {
         operation = 'x';
-        // display.textContent = this.textContent;
+        displayBox.textContent = this.textContent;
     } else if (this.id == 'minus') {
         operation = '-';
-        // display.textContent = this.textContent;
+        displayBox.textContent = this.textContent;
     } else if (this.id == 'add') {
         operation = '+';
-        // display.textContent = this.textContent;
+        displayBox.textContent = this.textContent;
     }
 };
 
@@ -63,8 +65,16 @@ equal.addEventListener('click', calculate);
 function calculate() {
     // let displayNum = parseFloat(display.textContent);
     if (operation === '÷') {
-        displayBox.innerHTML = cashReg.divide(secondNum)
-    };
+        var total = displayBox.innerHTML / secondNum;
+        displayBox.innerHTML = total;
+        // console.log('add');
+    } else if (operation === 'x') {
+        displayBox.innerHTML = cashReg.multiply(secondNum);
+    } else if (operation === '-') {
+        displayBox.innerHTML = cashReg.subtract(secondNum);
+    } else if (operation === '+') {
+        displayBox.innerHTML = cashReg.add(secondNum);
+    }
 
     // if (opButton === '÷'){
     //     cashReg.divide(parseFloat(display.textContent));

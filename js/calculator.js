@@ -53,6 +53,7 @@ var calculatorModule = function () {
     //     }
     // }
 
+    
     calculator.add = function(x){
         if (typeof x === 'number'){
             total += x;
