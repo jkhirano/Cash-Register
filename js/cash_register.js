@@ -50,12 +50,16 @@ let equal = document.getElementById('equal');
 equal.addEventListener('click', calculate);
 
 function calculate(){
-    if (opButton === '÷'){
-        cashReg.divide(parseFloat(display.textContent));
-        displayBox.textContent = cashReg.getTotal();
-    }
-}
+    let displayNum = parseFloat(display.textContent);
+if (opButton === '÷'){
+return display.innerHTML = cashReg.divide(displayNum)
+};
 
+    // if (opButton === '÷'){
+    //     cashReg.divide(parseFloat(display.textContent));
+    //     displayBox.textContent = cashReg.getTotal();
+    // }
+}
 
 // CLEAR DISPLAY:
 let clear = document.getElementById('clear');
