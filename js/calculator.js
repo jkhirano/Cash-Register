@@ -1,49 +1,63 @@
-var calculatorModule = function () {
+var calculatorModule = (function () {
     let memory = 0;
     let total = 0;
     let balance = 20;
     let calculator = {};
 
     // calculator.load = function (x) {
-    //     if (typeof parseInt(x) === 'number') {
+    //     if (parseInt(x) === 'number') {
     //         if (total == '0') {
     //             total = x;
-    //         }else{
-    //         total += x;}
+    //         }
+    //         else{
+    //         total += x;
     //         return total;
-    //     }else{
-    //         throw new Error;
     //     }
-
+    // }
     // }
 
-    calculator.load = function (x) {
-        if (typeof x === 'number'){
-            total = x;
-        }else{
-            throw error;
+
+    calculator.load = function (x){
+        if(parseFloat(x) === NaN){
+            if(total !== 0 && parseFloat(total) !== NaN){
+                total += x;
+            }
+        }else {
+            if(total === 0){
+                total = x;
+            }else {
+                total += x;
+            }
         }
-    }
+     }
 
-    calculator.clearTotal = function(x){
-        return total = 0;
-    }
+    // calculator.load = function (x) {
+    //     if (typeof x === 'number'){
+    //         total = x;
+    //     }else{
+    //         throw error;
+    //     }
+    // }
 
-    calculator.getTotal = function (x) {
-        return total;
-    }
+    // calculator.clearTotal = function(x){
+    //     return total = 0;
+    // }
 
-    calculator.getBalance = function(x){
-        return total = balance;
-    }
+    // calculator.getTotal = function (x) {
+    //     return total;
+    // }
 
-    calculator.deposit = function(x){
-        return balance + x;
-    }
+    // calculator.getBalance = function(x){
+    //     return total = balance;
+    // }
 
-    calculator.withdraw = function(x){
-        return balance - x;
-    }
+    // calculator.deposit = function(x){
+    //     return balance + x;
+    // }
+
+    // calculator.withdraw = function(x){
+    //     return balance - x;
+    // }
 
     // calculator.add = function (x, y) {
     //     if (typeof parseInt(x) === 'number' && typeof parseInt(y) === 'number'){
@@ -57,6 +71,7 @@ var calculatorModule = function () {
     calculator.add = function(x){
         if (typeof x === 'number'){
             total += x;
+            return total;
         }else{
             throw error;
         }
@@ -65,6 +80,7 @@ var calculatorModule = function () {
     calculator.subtract = function (x) {
         if (typeof x === 'number'){
             total -= x;
+            return total;
         }else{
             throw error;
         }
@@ -73,6 +89,7 @@ var calculatorModule = function () {
     calculator.multiply = function (x) {
         if (typeof x === 'number'){
             total *= x;
+            return total;
         }else{
             throw error;
         }
@@ -81,23 +98,24 @@ var calculatorModule = function () {
     calculator.divide = function (x) {
         if (typeof x === 'number'){
             total /= x;
+            return total;
         }else{
             throw error;
         }
     }
 
-    calculator.recallMemory = function (x) {
-        return memory;
-    }
+    // calculator.recallMemory = function (x) {
+    //     return memory;
+    // }
 
-    calculator.saveMemory = function (x) {
-        memory = total;
-    }
+    // calculator.saveMemory = function (x) {
+    //     memory = total;
+    // }
 
-    calculator.clearMemory = function (x) {
-        memory = 0;
-    }
+    // calculator.clearMemory = function (x) {
+    //     memory = 0;
+    // }
 
     return calculator;
 
-};
+})();
